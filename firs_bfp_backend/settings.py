@@ -98,11 +98,7 @@ REST_FRAMEWORK = {
 }
 
 # ── CORS ────────────────────────────────────────────────────────────────────
-CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:5173').split(',')
-]
-
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 # ── Email (Gmail SMTP) ──────────────────────────────────────────────────────
